@@ -7,6 +7,6 @@
       log.text
     }}</a>
     <span class="log-date">{{ log.date | date : "short" }}</span>
-    <button class="btn btn-danger">Remove</button>
+    <button class="btn btn-danger" (click)="onDelete(log)">Remove</button>
   </li>
 </ul>

@@ -25,4 +25,10 @@ export class LogsComponent implements OnInit {
   onSelect(log: Log): void {
     this.logService.setFormLog(log);
   }
+
+  onDelete(log: Log): void {
+    if (confirm('Are you sure you want to delete')) {
+      this.logService.deleteLog(log);
+    }
+  }
 }
